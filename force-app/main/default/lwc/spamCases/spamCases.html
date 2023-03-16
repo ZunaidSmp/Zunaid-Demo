@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Case List">
+        <lightning-datatable
+            key-field="Id"
+            data={cases}
+            columns={columns}
+            onrowaction={handleRowAction}>
+        </lightning-datatable>
+    </lightning-card>
+</template>
