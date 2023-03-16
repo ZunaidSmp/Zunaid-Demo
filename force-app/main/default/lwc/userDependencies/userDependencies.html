@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="User Dependencies">
+        <lightning-input-field field-name="OwnerId" onchange={handleUserChange}></lightning-input-field>
+        <template if:true={showDependencies}>
+            <p>Dependencies:</p>
+            <template for:each={dependentFields} for:item="dependentField">
+                <p key={dependentField}>{dependentField}</p>
+            </template>
+        </template>
+    </lightning-card>
+</template>
